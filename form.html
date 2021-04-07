@@ -1,0 +1,111 @@
+<!-- 
+Carla Pérez Gavilán Del Castillo, A01023033
+HW2 - Javascript Form 
+04-04-2021 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+    <title>Form HW</title>
+</head>
+
+<body>
+
+    <form action="#" id="form">
+        <h1>
+            HW2 - Javacript Form
+        </h1>
+        <h4>
+            Carla Pérez Gavilán Del Castillo, A01023033
+        </h4>
+        <h4>
+            04-04-2021
+        </h4>
+        <div class="tab">
+            <p><input type="Nombre" onblur="validateContent(this)" name="nombre" placeholder="Nombre(s)" id="nombre">
+            </p>
+            <p><input type="Apellidos" onblur="validateContent(this)" name="apellido" placeholder="Apellido(s)"
+                    id="apellidos"></p>
+            <p><input type="Fecha de Nacimiento" onblur="validateFNac(this)" name="fnacimiento"
+                    placeholder="Fecha de Nacimiento dd/mm/aaaa" id="fnacimiento"></p>
+        </div>
+        <div class="tab">
+            <p><input type="Lugar de Nacimiento" name="lnacimiento" onblur="validateContent(this)"
+                    placeholder="Lugar de Nacimiento" id="lnacimiento"></p>
+            <p><input type="Código Postal" name="cp" placeholder="Código Postal" onblur="autoFill(this)" id="cp"></p>
+            <h6 id="warnmessage">Warning: This cp wasn't found in our data base try another one</h6>
+            <p><input type="Pais" placeholder="País" name="pais" onblur="validateContent(this)" id="pais"></p>
+
+        </div>
+        <div class="tab">
+            <p><input type="Municipio" name="municipio" placeholder="Municipio" id="municipio"></p>
+            <p>
+                <select onchange="validateContent(this)" name="colonia" type="Colonia" placeholder="Colonia"
+                    id="colonia">
+                    <option value="none">Colonia (Sin Selección)</option>
+                </select>
+            </p>
+            <p><input name="estado" type="Estado" placeholder="Estado" id="estado"></p>
+        </div>
+        <div class="tab">
+            <p><input type="Clabe de Banco" name="clabe" onblur="getBankName(this)" placeholder="CLABE interbancaria"
+                    id="clabe"></p>
+            <p><input type="Banco" name="banco" onblur="validateContent(this)" placeholder="Nombre del Banco"
+                    id="banco"></p>
+            <p><input type="CURP" name="curp" onblur="validateCURP(this)" placeholder="CURP" id="curp"></p>
+            <p><input type="Telefono Emergencia" name="telemer" onblur="validateEmer(this)"
+                    placeholder="Teléfono de Emergencia" id="telemer"></p>
+        </div>
+
+    </form>
+
+    <div id="details" class="details">
+        <h1>
+            ¡Forma Completada!
+        </h1>
+        <label>Nombre: </label>
+        <p><span id='display_nombre'></span></p>
+        <label>Apellidos: </label>
+        <p><span id='display_apellidos'></span></p>
+        <label>Fecha Nacimiento: </label>
+        <p><span id='display_fecha'></span></p>
+        <label>Lugar de Nacimiento: </label>
+        <p><span id='display_lnacimiento'></span></p>
+        <label>Pais: </label>
+        <p><span id='display_pais'></span></p>
+        <label>Estado: </label>
+        <p><span id='display_estado'></span></p>
+        <label>Municipio: </label>
+        <p><span id='display_municipio'></span></p>
+        <label>Colonia: </label>
+        <p><span id='display_col'></span></p>
+        <label>Código Postal: </label>
+        <p><span id='display_cp'></span></p>
+        <label>Clabe: </label>
+        <p><span id='display_clabe'></span></p>
+        <label>Banco: </label>
+        <p><span id='display_banco'></span></p>
+        <label>CURP: </label>
+        <p><span id='display_curp'></span></p>
+        <label>Teléfono Emergencia: </label>
+        <p><span id='display_telemer'></span></p>
+    </div>
+    <div id="buttonDiv">
+        <div id="otherButtons">
+            <button type="button" id="back" onclick="next(-1)">Back</button>
+            <button type="button" id="next" onclick="next(1)">Next</button>
+        </div>
+        <p><input type="submit" disabled=true id="submit" value="Enviar" onclick="submitShow()" /></p>
+    </div>
+
+</body>
+<script src="form.js"></script>
+
+</html>

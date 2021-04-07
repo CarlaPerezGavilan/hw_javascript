@@ -1,0 +1,128 @@
+
+/*
+Carla Pérez Gavilán Del Castillo, A01023033
+HW2 - Javascript Form 
+04-04-2021 
+*/
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #e4dcd5;
+  }
+  
+  #form {
+    background-color: #ffffff;
+    margin: 100px auto;
+    font-family: 'Montserrat';
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    margin-bottom: 0px;
+  }
+  
+#buttonDiv {
+    margin: auto;
+    font-family: 'Montserrat';
+    width: 70%;
+    min-width: 300px;
+    overflow: auto;
+    margin-top: 2.5%;
+    padding-left: 22%;
+    position: relative;
+  }
+
+  #otherButtons{
+      position: relative;
+      padding-left: 5%;
+  }
+
+  #details{
+    background-color: #ffffff;
+    margin: 100px auto;
+    font-family: 'Montserrat';
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    margin-bottom: 0px;
+  }
+  
+  h1 {
+    text-align: center;  
+    color: #5ee0cb;
+  }
+  
+  h4{
+      color: #aaaaaa;
+      text-align: center;
+  }
+  input, select {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    border: 1px solid #aaaaaa;
+  }
+
+  .details {
+    display: none
+  }
+
+  label {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Montserrat';
+  }
+
+  span {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    color:#5ee0cb;
+    font-family: 'Montserrat';
+  }
+  
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  input.valid {
+    background-color: #cbfcc1;
+  }
+  
+  .tab {
+    display: none;
+  }
+  
+   button, #submit {
+    background-color: #5ee0cb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+  }
+  
+  button:hover, #submit:hover {
+    opacity: 0.7;
+  }
+  #warnmessage{
+      display: none;
+      color: red;
+  }
+  #submit{
+      width: 200px;
+      background-color: #65cf81;
+  }
+  #submit:disabled{
+    background-color:#aaaaaaa9;
+  }
+  #submit:disabled:hover{
+    background-color:#aaaaaaa9;
+    opacity: 1;
+  }
+  #back {
+    background-color: #7c7c7c;
+  }
+  
